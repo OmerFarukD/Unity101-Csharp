@@ -324,5 +324,4 @@ string vowels = harf switch
     _ => "Sessiz"
 };
 Console.WriteLine(vowels);
-
-// Değişiklik
+// Değişiklik 
