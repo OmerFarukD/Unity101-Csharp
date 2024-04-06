@@ -5,11 +5,15 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Giris", "Giris\Giris.csproj", "{5FAB6AB2-6BFE-4091-86EF-02FC6BC14C11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodlar", "Metodlar\Metodlar.csproj", "{14464500-9EE1-4DE6-97E4-609301B22FFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodlar", "Metodlar\Metodlar.csproj", "{14464500-9EE1-4DE6-97E4-609301B22FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diziler", "Diziler\Diziler.csproj", "{2026989D-8165-4CBB-BD95-44D0E8CB0523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diziler", "Diziler\Diziler.csproj", "{2026989D-8165-4CBB-BD95-44D0E8CB0523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listeler", "Listeler\Listeler.csproj", "{900F3AED-FEE5-45BF-9D91-F49FB43D0B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listeler", "Listeler\Listeler.csproj", "{900F3AED-FEE5-45BF-9D91-F49FB43D0B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Giris", "OOP_Giris\OOP_Giris.csproj", "{22F8271D-8779-4451-B1B6-40FDD003629B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{8EB078E1-2250-4842-96AB-D22ACE29801D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{900F3AED-FEE5-45BF-9D91-F49FB43D0B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900F3AED-FEE5-45BF-9D91-F49FB43D0B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{900F3AED-FEE5-45BF-9D91-F49FB43D0B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F8271D-8779-4451-B1B6-40FDD003629B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F8271D-8779-4451-B1B6-40FDD003629B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F8271D-8779-4451-B1B6-40FDD003629B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F8271D-8779-4451-B1B6-40FDD003629B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
