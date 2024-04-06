@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Giris", "OOP_Giris\OOP_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{8EB078E1-2250-4842-96AB-D22ACE29801D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Uygulama1", "OOP_Uygulama1\OOP_Uygulama1.csproj", "{1D6BD61D-AD85-414C-96E7-5E4B707488F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EB078E1-2250-4842-96AB-D22ACE29801D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6BD61D-AD85-414C-96E7-5E4B707488F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6BD61D-AD85-414C-96E7-5E4B707488F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6BD61D-AD85-414C-96E7-5E4B707488F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6BD61D-AD85-414C-96E7-5E4B707488F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

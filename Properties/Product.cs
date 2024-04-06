@@ -1,11 +1,12 @@
 ﻿// ürünün adı : Ürün adı minimum 2 karakterli olmalıdır
 // ürünün değeri : ürünün değeri negatif değerler alamaz
 //2-) ürünün değerini kullanıcı girdikten sonra kdv li fiyatını müşteriye gösteriniz.
-
-// ürünün stok değeri : negatif değer alamaz 
+// ürünün stok değeri : negatif değer alamaz.
 // ürünün satıcısı :  ürün satıcısı alanı minimum 2 karakterli olmalıdır.
 // ürünün kategorisi : ürün satıcısı alanı minimum 2 karakterli olmalıdır.
 namespace Properties;
+
+// SOLID 
 public class Product
 {
     private string name;
@@ -93,6 +94,7 @@ public class Product
     }
 
     // Ürünün Kategorisi -> Name
+    // 13.00 da dersteyiz.
 
     public override string ToString()
     {
