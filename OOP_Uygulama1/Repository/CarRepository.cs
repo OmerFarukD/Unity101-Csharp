@@ -6,10 +6,6 @@ public class CarRepository
    private static List<Car> _cars;
     public CarRepository()
     {
-
-
-
-
         _cars = new List<Car>();
     }
 
@@ -53,6 +49,4 @@ public class CarRepository
         }
         _cars.Remove(deleted);
     }
-
-
 }
