@@ -18,7 +18,6 @@ public class BookRepository : IBookRepository
             new Book(6,"Yeraltından Notlar",2,2,650,300,"Beyaz"),
             new Book(7,"Harry Potter",3,3,550,450,"Gri")
         };
-        //12.40 da dersteyiz...
     }
 
     public void Add(Book book)
