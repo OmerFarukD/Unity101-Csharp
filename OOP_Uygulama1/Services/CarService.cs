@@ -51,15 +51,7 @@ public class CarService
     public void GetById(int id)
     {
         Car car = _carRepository.GetById(id);
-        CarResponseDto carResponseDto = new CarResponseDto()
-        {
-            BrandName = car.Brand.Name,
-            ColorName = car.ColorName,
-            DailyPrice = car.DailyPrice,
-            ModelName = car.Model.Name,
-            ModelYear = car.Model.Year
-        };
-
+        CarResponseDto carResponseDto = carConverter.ConvertToResponseDto(car);
         Console.WriteLine(carResponseDto);
     }
 
