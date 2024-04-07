@@ -65,8 +65,7 @@ CarService carService = new CarService();
 carService.Add(car);
 carService.Add(car1);
 
-//carService.GetAll();
+carService.GetAll();
 
-carService.GetById(1);
-
+//carService.GetById(1);
 

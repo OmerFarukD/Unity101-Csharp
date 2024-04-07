@@ -1,6 +1,7 @@
 ﻿using OOP_Uygulama1.Models;
 using OOP_Uygulama1.Models.Dtos;
 using OOP_Uygulama1.Repository;
+using OOP_Uygulama1.Services.Converter;
 
 namespace OOP_Uygulama1.Services;
 // Car : ColorName alanı minimum 2 karakterli olmalıdır.
@@ -8,19 +9,18 @@ namespace OOP_Uygulama1.Services;
 public class CarService
 {
     private CarRepository _carRepository;
+    private CarConverter carConverter;
 
     public CarService()
     {
         _carRepository = new CarRepository();
+        carConverter = new CarConverter();
     }
 
     public void Add(Car car)
     {
-        if (car.ColorName.Length < 2)
-        {
-            Console.WriteLine("Aracın ColorName alanı minimum 2 karakterli olmalıdır.");
-        }
 
+        ColorNameValidator(car.ColorName);
         car.DailyPrice = car.DailyPrice * 1.2;
 
 
@@ -29,19 +29,16 @@ public class CarService
        // _carRepository.GetAllCars().ForEach(c => Console.WriteLine(car));
     }
 
+    // List<Car> -> List<CarResponseDto>
+    // Car -> CarResponseDto
     public void GetAll()
     {
-        foreach (Car car in _carRepository.GetAllCars())
+        List<Car> cars = _carRepository.GetAllCars();
+        List<CarResponseDto> carResponseDtos = carConverter.ConvertToResponseDtoList(cars);
+
+        foreach(CarResponseDto dto in carResponseDtos)
         {
-            CarResponseDto carResponseDto = new CarResponseDto()
-            {
-                BrandName = car.Brand.Name,
-                ColorName = car.ColorName,
-                DailyPrice = car.DailyPrice,
-                ModelName = car.Model.Name,
-                ModelYear = car.Model.Year         
-            };
-            Console.WriteLine(carResponseDto);
+            Console.WriteLine(dto);
         }
 
     }
@@ -64,6 +61,15 @@ public class CarService
         };
 
         Console.WriteLine(carResponseDto);
+    }
+
+    private void ColorNameValidator(string colorName)
+    {
+        if (colorName.Length<2)
+        {
+            Console.WriteLine("Aracın ColorName alanı minimum 2 karakterli olmalıdır.");
+            return;
+        }
     }
 
 }
