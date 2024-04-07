@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OOP_Uygulama2.Models;
 
-namespace OOP_Uygulama2.Repository
+namespace OOP_Uygulama2.Repository;
+
+public interface IBookRepository
 {
-    internal interface IBookRepository
-    {
-    }
+    void Add(Book book);
+
+    List<Book> GetAll();
+
+    Book GetById(int id);
+
+    void Delete(int id);
 }
