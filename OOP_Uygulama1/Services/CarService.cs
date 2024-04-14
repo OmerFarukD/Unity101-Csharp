@@ -1,4 +1,5 @@
-﻿using OOP_Uygulama1.Models;
+﻿using OOP_Uygulama1.Exceptions;
+using OOP_Uygulama1.Models;
 using OOP_Uygulama1.Models.Dtos;
 using OOP_Uygulama1.Repository;
 using OOP_Uygulama1.Services.Converter;
@@ -19,12 +20,23 @@ public class CarService
 
     public void Add(Car car)
     {
+        try
+        {
+            ColorNameValidator(car.ColorName);
+            car.DailyPrice = car.DailyPrice * 1.2;
 
-        ColorNameValidator(car.ColorName);
-        car.DailyPrice = car.DailyPrice * 1.2;
+
+            _carRepository.Add(car);
+        }
+
+        catch (BusinessException ex)
+        {
+            Console.WriteLine("BusinessException Fırlatıldı.");
+            Console.WriteLine(ex.Message);
+        }
 
 
-        _carRepository.Add(car);
+   
 
        // _carRepository.GetAllCars().ForEach(c => Console.WriteLine(car));
     }
@@ -59,8 +71,10 @@ public class CarService
     {
         if (colorName.Length<2)
         {
-            Console.WriteLine("Aracın ColorName alanı minimum 2 karakterli olmalıdır.");
-            return;
+            throw new BusinessException("Aracın ColorName alanı minimum 2 karakterli olmalıdır.");
         }
     }
+
+    // İlgili nesne bulunmadığı zaman atılan Exception -> NotFoundException
+    // İlgili iş kuralın uymadığı zaman atılan Exception -> BusinessException
 }

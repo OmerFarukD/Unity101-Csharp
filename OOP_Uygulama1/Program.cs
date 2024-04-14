@@ -1,9 +1,8 @@
 ﻿// Bir Rent A Car projesi yapılması isteniyor.
-// Bu projede 3 tane tablomuz olduğunu varsayalım
-// Car , Model , Brand tablolarımız var 
-// bu tablolar için bir veritabanının olduğunu varsayarak( Listeleri kullanarak)
-// listeleme , ekleme, id ye göre getirme , silme operasyonlarını simüle ediniz.
-
+// Bu projede 3 tane tablomuz olduğunu varsayalım.
+// Car , Model , Brand tablolarımız var.
+// Bu tablolar için bir veritabanının olduğunu varsayarak( Listeleri kullanarak)
+// Listeleme , ekleme, id ye göre getirme , silme operasyonlarını simüle ediniz.
 // Car -> Id , CreatedTime , Model , Brand , ColorName, DailyPrice
 // Model -> Id, CreatedTime, Name, Year
 // Brand -> Id, CreatedTime, Name
@@ -50,22 +49,26 @@ Brand brand1 = new Brand()
     CreatedTime = DateTime.Now,
     Name = "BMW"
 };
+
 Car car1 = new Car()
 {
     Id = 1,
     Brand = brand1,
-    ColorName = "Kırmızı",
+    ColorName = "ı",
     CreatedTime = DateTime.Now,
     DailyPrice = 2500,
     Model = model1
 };
 
+ModelService modelService = new ModelService();
+
+//modelService.Add(model1);
+modelService.GetById(6);
+//modelService.GetAll();
+//modelService.Delete(10);
+//modelService.GetAll();
 CarService carService = new CarService();
-
-carService.Add(car);
+//carService.Add(car);
 carService.Add(car1);
-
-carService.GetAll();
-
+//carService.GetAll();
 //carService.GetById(1);
-
